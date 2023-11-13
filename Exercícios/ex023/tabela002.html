@@ -13,20 +13,41 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
-        td, th {
+        td,
+        th {
             border: 1px solid black;
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
         }
 
-        tfoot > tr > td {
-            text-align: center;
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
+        tbody>tr:nth-child(odd) {
+            /* 2n-1 */
+            background-color: white;
+        }
+
+        tbody>tr:nth-child(even) {
+            /* 2n */
+            background-color: lightgray;
         }
 
         td.num {
@@ -40,6 +61,7 @@
     <!-- 
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -47,11 +69,12 @@
             TFOOT
                 TR, TD, TH
      -->
-     <table>
+    <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -88,20 +111,20 @@
                 <td class="num">8 794 957</td>
             </tr>
             <tr>
-               <td>Pará</td>
-               <td class="num">8 121 025</td> 
+                <td>Pará</td>
+                <td class="num">8 121 025</td>
             </tr>
             <tr>
-               <td>Santa Catarina</td>
-               <td class="num">7 610 361</td> 
+                <td>Santa Catarina</td>
+                <td class="num">7 610 361</td>
             </tr>
             <tr>
-               <td>Goiás</td>
-               <td class="num">7 056 495</td> 
+                <td>Goiás</td>
+                <td class="num">7 056 495</td>
             </tr>
             <tr>
-               <td>Maranhão</td>
-               <td class="num">6 775 805</td> 
+                <td>Maranhão</td>
+                <td class="num">6 775 805</td>
             </tr>
             <tr>
                 <td>Paraíba</td>
@@ -166,11 +189,12 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td><strong>203 062 512</strong></td>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>203 062 512</strong></td>
             </tr>
         </tfoot>
-     </table>
+    </table>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores inventore obcaecati repellat quia voluptates beatae odit, modi sed debitis! Hic nisi quibusdam nostrum minus excepturi esse eum ducimus nobis optio. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, commodi veniam. Sit accusamus ut cumque exercitationem perferendis eos alias dolorem id dolore, suscipit in. Mollitia dolor autem sit explicabo facilis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis distinctio laudantium fuga, exercitationem laborum perferendis sit provident impedit quo voluptatibus similique voluptate laboriosam molestiae omnis libero culpa beatae iusto ad. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure ipsum modi repellendus debitis quo tenetur ducimus consequatur delectus alias corporis beatae natus exercitationem enim cumque quibusdam ullam, cupiditate iste veniam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae veritatis quia beatae, aliquid neque officiis voluptatibus voluptate sequi recusandae tempore. Magnam ipsa illum ratione iure nihil enim culpa velit incidunt! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non perspiciatis, cum vel inventore ducimus similique velit quos quam enim incidunt nostrum ullam nam reprehenderit omnis? Perferendis repudiandae consectetur autem commodi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, cupiditate. Dolorem ratione delectus nesciunt, error quae repudiandae voluptatum eligendi molestiae placeat, maiores est voluptatem dignissimos accusamus, iusto debitis veniam! Nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolorem sunt voluptate esse distinctio fuga quia laborum, animi dolor, est et nemo. Labore accusamus aliquam doloremque harum quaerat, error fugiat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam soluta repellendus praesentium commodi dignissimos fuga excepturi a maxime suscipit, sunt ex delectus animi nobis nulla tempora facere non est temporibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias debitis et eveniet architecto, tenetur maiores voluptatum ducimus quasi at eligendi quia veniam sapiente iste aliquid natus reprehenderit, nisi iusto eos! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, dignissimos consequuntur sunt dolor illo architecto explicabo quas atque delectus doloribus dicta recusandae accusantium saepe inventore odit? Qui saepe quo quos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut reprehenderit necessitatibus assumenda maiores eaque rerum voluptate autem est, non soluta veniam tempora laborum voluptatem quis qui sit? Consequuntur, eos alias. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione ipsam quod ad quo laudantium quos porro ipsum molestias, dolore quasi veritatis beatae distinctio necessitatibus tenetur amet laboriosam officiis quis atque?</p>
 </body>
 
 </html>
